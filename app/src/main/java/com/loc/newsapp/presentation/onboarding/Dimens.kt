@@ -1,7 +1,6 @@
 package com.loc.newsapp.presentation.onboarding
 
 import androidx.compose.ui.unit.dp
-import com.loc.newsapp.domain.model.Article
 
 object Dimens {
     val MediumPadding1 = 24.dp
@@ -13,4 +12,5 @@ object Dimens {
     val ExtraSmallPadding2=6.dp
     val SmallIconSize=11.dp
     val IconSize=20.dp
+    val ArticleImageHeight=248.dp
 }
