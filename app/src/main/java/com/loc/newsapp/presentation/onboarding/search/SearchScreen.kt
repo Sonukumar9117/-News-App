@@ -6,9 +6,6 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.remember
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.loc.newsapp.domain.model.Article
@@ -21,7 +18,7 @@ import com.loc.newsapp.presentation.onboarding.navgraph.Route
 fun SearchScreen(
     state: SearchState,
     event:(SearchEvent) -> Unit,
-    navigate:(String) -> Unit
+    navigateToDetails:(Article) -> Unit
 ) {
 
     Column(
@@ -44,7 +41,7 @@ fun SearchScreen(
                 articles = articles,
                 onClick = {
                     //TODO: Navigate to details screen
-                    navigate(Route.DetailsScreen.route)
+                    navigateToDetails(it)
                 }
             )
         }

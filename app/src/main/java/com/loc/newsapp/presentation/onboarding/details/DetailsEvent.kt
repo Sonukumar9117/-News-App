@@ -1,5 +1,8 @@
 package com.loc.newsapp.presentation.onboarding.details
 
+import com.loc.newsapp.domain.model.Article
+
 sealed class DetailsEvent {
-    object SavedArticle : DetailsEvent()
+    data class UpsertDeleteArticle(val article: Article) : DetailsEvent()
+    object RemoveSideEffect : DetailsEvent()
 }
