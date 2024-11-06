@@ -48,23 +48,23 @@ fun HomeScreen(articles: LazyPagingItems<Article>, navigateToSearch:() -> Unit ,
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = MediumPadding1)
+            .padding(top =0.dp)
             .statusBarsPadding()
     ) {
         Image(
             painter = painterResource(id = R.drawable.ic_logo),
             contentDescription = null,
             modifier = Modifier
-                .width(150.dp)
-                .height(30.dp)
-                .padding(horizontal = MediumPadding1)
+                .width(0.dp)
+                .height(0.dp)
+                .padding(horizontal = 10.dp)
         )
 
         Spacer(modifier = Modifier.height(MediumPadding1))
 
         SearchBar(
             modifier = Modifier
-                .padding(horizontal = MediumPadding1)
+                .padding(horizontal = 10.dp)
                 .fillMaxWidth(),
             text = "",
             readOnly = true,
@@ -80,7 +80,7 @@ fun HomeScreen(articles: LazyPagingItems<Article>, navigateToSearch:() -> Unit ,
         Text(
             text = titles, modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = MediumPadding1)
+                .padding(start = 0.dp, end = 0.dp)
                 .basicMarquee(), fontSize = 12.sp,
             color = colorResource(id = R.color.placeholder)
         )

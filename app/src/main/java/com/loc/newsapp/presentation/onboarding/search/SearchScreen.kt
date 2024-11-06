@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.paging.compose.collectAsLazyPagingItems
 import com.loc.newsapp.domain.model.Article
 import com.loc.newsapp.presentation.onboarding.Dimens.MediumPadding1
@@ -26,7 +27,7 @@ fun SearchScreen(
             .padding(top = MediumPadding1, start = MediumPadding1, end = MediumPadding1)
             .statusBarsPadding()
     ) {
-        SearchBar(
+        SearchBar( modifier = Modifier.padding(MediumPadding1),
             text = state.searchQuery,
             readOnly = false,
             onValueChange = { event(SearchEvent.UpdateSearchQuery(it)) },
